@@ -8,4 +8,4 @@ import Parser
 
 main :: IO ()
 main = do
-    pPrint $ parse brainfuckP "test" "aa b ++++[++]"
+    getContents >>= pPrint . parse brainfuckP "stdin"

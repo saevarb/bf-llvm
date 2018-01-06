@@ -28,7 +28,7 @@ library:
   dependencies:
 
 executables:
-  bf-llvm-exe:
+  compiler:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
