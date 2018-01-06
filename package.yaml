@@ -49,3 +49,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - bf-llvm
+    - tasty
+    - tasty-hspec
