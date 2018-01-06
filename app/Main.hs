@@ -6,7 +6,6 @@ import Text.Pretty.Simple
 import Lib
 import Parser
 
-
 main :: IO ()
 main = do
-    undefined
+    pPrint $ parse brainfuckP "test" "aa b ++++[++]"
