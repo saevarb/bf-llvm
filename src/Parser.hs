@@ -1,6 +1,6 @@
 module Parser where
 
-import Control.Applicative
+import Control.Applicative hiding (some)
 import Data.Functor
 import Data.Either
 import Data.Void

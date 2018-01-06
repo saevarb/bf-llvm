@@ -24,10 +24,10 @@ dependencies:
 - megaparsec
 - llvm-hs
 - llvm-hs-pure
+- mtl
 
 library:
   source-dirs: src
-  dependencies:
 
 executables:
   compiler:
