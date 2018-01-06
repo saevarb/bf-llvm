@@ -22,6 +22,10 @@ data BrainfuckOp
 
 brainfuckP :: Parser [BrainfuckOp]
 brainfuckP =
+    brainfuckP' <* eof
+
+brainfuckP' :: Parser [BrainfuckOp]
+brainfuckP' =
     rights <$> some (eitherP commentCharP (choice parsers))
   where
     parsers =
@@ -31,7 +35,7 @@ brainfuckP =
         , char '-' $> DecVal
         , char '.' $> WriteVal
         , char ',' $> ReadVal
-        , Loop <$> (char '[' *> brainfuckP <* char ']')
+        , Loop <$> between (char '[') (char ']') brainfuckP'
         ]
 
     commentCharP =
