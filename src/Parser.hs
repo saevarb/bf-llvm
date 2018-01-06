@@ -3,11 +3,12 @@ module Parser where
 import Control.Applicative
 import Data.Functor
 import Data.Either
+import Data.Void
 
 import Text.Megaparsec
 import Text.Megaparsec.Char
 
-type Parser = Parsec String String
+type Parser = Parsec Void String
 
 data BrainfuckOp
     = IncPtr             -- >
